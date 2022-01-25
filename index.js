@@ -45,6 +45,8 @@ const generateId = () => {
 const unknowEndpoint = (req,res) => {
   res.status(404).send({ error: 'unknown endpoint' });
 };
+
+app.use(express.static('build'));
 app.use(cors());
 app.use(express.json());
 
