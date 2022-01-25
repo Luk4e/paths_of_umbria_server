@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/paths
+Content-Type: application/json
+
+{
+  "title": "Magione-Monte Ruffiano",
+  "description": "Il punto di partenza di questo itinerario è rappresentato dal cimitero di Magione. Si percorre uno stradello di crinale che attraversa aree coltivate a olivo. Lungo la strada si aprono vedute panoramiche sul lago Trasimeno e le sue isole. Il borgo che si intravede sulla sinistra è Montecolognola. Proseguendo il paesaggio si apre sulla valle della Goga con Colpiccione in primo piano, alcuni pini secolari e nuclei sparsi di cipressi. Si passa accanto al podere Petraia, alternando zone di bosco a tratti aperti, si imbocca una strada più ampia che si dirige verso la strada di collegamento tra il Trasimeno e Castel Rigone. Si attraversa la strada e si prende un piccolo sentiero che costeggia un’area archeologica sino ad arrivare a un bivio. Si sale verso Casa Quarantaia (494 metri) e si prende un sentiero molto panoramico che attraversa a mezza costa una zona di recente imboschimento (leccio e querce, cipressi, cedri). In poco tempo, seguendo i segnali, si arriva alla radura sotto il Monte Ruffiano. Si può salire alla cima del poggio dove si trovano i ruderi di una vecchia torre fortificata (423 metri). Dalla radura si torna indietro e si piega a destra prendendo un sentiero panoramico parallelo e più in basso rispetto al precedente. Si gode una bella prospettiva sulla chiesa di San Donato ed alcuni casali tipici. Si ritorna alla strada asfaltata e dopo averla attraversata si percorre lo stesso itinerario dell’andata sino al punto in cui si era usciti dal bosco all’altezza di una grande  proprietà agricola con casale ristrutturato di recente (I Pianelli). Da questo punto si prosegue in salita per la strada che si dirige verso il Colle Castelluccio (478 metri). Da qui seguendo la segnaletica in poco tempo si torna al punto di partenza.",
+  "km": 12.97,
+  "duration": "4:30",
+  "differenceAltitude": 460,
+  "difficult": "Escursionistica",
+}
