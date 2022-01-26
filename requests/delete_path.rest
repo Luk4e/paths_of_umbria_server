@@ -1,0 +1,1 @@
+DELETE http://localhost:3001/api/paths/61f08566dcb3cbf0e38733f5
