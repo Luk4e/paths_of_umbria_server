@@ -58,12 +58,12 @@ pathsRouter.post('/', async (request, response) => {
   response.status(201).json(savedPath.toJSON());
 
 });
-
+/* 
 pathsRouter.delete('/:id',async (request, response) => {
   await Path.findByIdAndRemove(request.params.id);
   response.status(204).end();
-});
-
+}); */
+/* 
 pathsRouter.put('/:id', (request, response, next) => {
   const body = request.body;
 
@@ -84,5 +84,5 @@ pathsRouter.put('/:id', (request, response, next) => {
     .catch((error) => next(error));
 });
  
-
+ */
 module.exports = pathsRouter;
