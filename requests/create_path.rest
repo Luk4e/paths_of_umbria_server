@@ -1,12 +1,4 @@
 POST http://localhost:3001/api/paths
 Content-Type: application/json
 
-{
-  "title": "Path test with the reference to a user ",
-  "description": "Just test path fro testing",
-  "km": 1,
-  "duration": "1:11",
-  "differenceAltitude": 1,
-  "difficult": "E",
-  "userId": "61f69c27dbdad6ddf910cd15"
-}
+
