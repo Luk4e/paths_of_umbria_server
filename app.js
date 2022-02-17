@@ -23,7 +23,12 @@ app.use(express.static('build'));
 app.use(express.json());
 app.use(middleware.requestLogger);
 
+app.get('*', (res, req) => {
+  res.sendFile('build');
+});
+
 app.use('/api/paths', pathsRouter);
+
 // app.use('/api/users', usersRouter);
 // app.use('/api/login', loginRouter);
 
