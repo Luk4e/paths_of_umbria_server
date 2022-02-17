@@ -25,7 +25,7 @@ app.use(middleware.requestLogger);
 
 app.use('/api/paths', pathsRouter);
 app.get('*', (req,res) =>{
-  res.sendFile('/build/index.html');
+  res.sendFile('/build');
 });
 
 // app.use('/api/users', usersRouter);
