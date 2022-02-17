@@ -24,8 +24,8 @@ app.use(express.json());
 app.use(middleware.requestLogger);
 
 app.use('/api/paths', pathsRouter);
-app.get('*', (req,res) =>{
-  res.sendFile('/build');
+app.get('/paths_a_piedi', (req,res) =>{
+  res.sendFile('/build/index.html');
 });
 
 // app.use('/api/users', usersRouter);
