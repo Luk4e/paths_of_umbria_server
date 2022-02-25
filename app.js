@@ -25,7 +25,7 @@ app.use(middleware.requestLogger);
 
 app.use('/api/paths', pathsRouter);
 
-app.use('/api*', (req,res) => {
+app.use('/*', (req,res) => {
   res.sendFile('build/index.html');
   console.log("nessun path");
 });
