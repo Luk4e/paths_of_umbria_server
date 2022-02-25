@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const mongoose = require('mongoose');
 const config = require('./utils/config');
 require('express-async-errors');
@@ -19,15 +20,16 @@ mongoose.connect(config.MONGODB_URI)
 
 app.use(cors());
 app.use(express.json({limit: '50mb'}));
-app.use(express.static('build'));
+//app.use(express.static('build'));
+app.use(express.static(path.join(__dirname, 'build')));
+
 app.use(express.json());
 app.use(middleware.requestLogger);
 
 app.use('/api/paths', pathsRouter);
 
-app.use('/*', (req,res) => {
-  res.sendFile('build/index.html');
-  console.log("nessun path");
+app.use('/', (req,res) => {
+  res.sendFile(path.join(__dirname,'build','index.html'));
 });
 
 // app.use('/api/users', usersRouter);
