@@ -25,6 +25,10 @@ app.use(middleware.requestLogger);
 
 app.use('/api/paths', pathsRouter);
 
+app.use('*', (req,res) => {
+  res.sendFile('build/index.html');
+});
+
 // app.use('/api/users', usersRouter);
 // app.use('/api/login', loginRouter);
 
