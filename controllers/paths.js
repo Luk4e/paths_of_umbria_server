@@ -26,7 +26,7 @@ pathsRouter.get('/:id', async (request, response) => {
 
 });
 
-pathsRouter.post('/', async (request, response) => {
+/* pathsRouter.post('/', async (request, response) => {
   
   const { title,
       description, 
@@ -57,7 +57,7 @@ pathsRouter.post('/', async (request, response) => {
   const savedPath = await path.save();
   response.status(201).json(savedPath.toJSON());
 
-});
+}); */
 /* 
 pathsRouter.delete('/:id',async (request, response) => {
   await Path.findByIdAndRemove(request.params.id);
