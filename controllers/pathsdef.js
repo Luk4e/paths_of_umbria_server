@@ -1,6 +1,14 @@
 const pathsRouter = require('express').Router();
+const GpxParser = require('gpxparser');
 const Path = require('../models/pathdef');
 const User = require('../models/user');
+
+const gpxparsed = (gpxfile) => {
+  const gpx = new GpxParser();
+  gpx.parse(gpxfile);
+  return gpx;
+};
+
 
 const getTokenFrom = request => {
   const authorization = request.get('authorization');
@@ -11,6 +19,35 @@ const getTokenFrom = request => {
 };
 
 pathsRouter.get('/', async (request, response) => {
+  const paths = await Path.find({});
+  const pathsGpx = await paths.map(p => {
+    if(p.gpx!==''){
+      return{
+        average_drop:p.average_drop,
+        average_time:p.average_time,
+        date:p.date,
+        description_en:p.description_en,
+        description_it:p.description_it,
+        difficult:p.difficult,
+        gpx:p.gpx,
+        loop:p.loop,
+        park_name:p.park_name,
+        path_length:p.path_length,
+        path_numbers:p.path_numbers,
+        pdf:p.pdf,
+        starting_point:p.starting_point,
+        title:p.title,
+        id:p._id,
+        gpx:gpxparsed(p.gpx).tracks[0].points.map(p => [p.lat, p.lon])[0]
+      }
+    }else{
+      return p;
+    }
+  });
+  response.json(pathsGpx);
+});
+
+pathsRouter.get('/allPaths', async (request, response) => {
   const paths = await Path.find({});
   response.json(paths);
 });
