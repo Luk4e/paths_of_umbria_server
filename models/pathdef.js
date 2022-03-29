@@ -32,16 +32,15 @@ const pathSchema = new mongoose.Schema({
   },
   loop: {
     type: Boolean,
-    required: true
+    required: true,
   },
   path_numbers: {
     type: [String],
-    required: false
+    required: false,
   },
   description_it: {
     type: String,
-    minlength: 5,
-    required: true,
+    required: false,
   },
   description_en: {
     type: String,

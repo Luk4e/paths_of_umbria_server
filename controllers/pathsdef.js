@@ -60,59 +60,59 @@ pathsRouter.get('/:id', async (request, response) => {
   }
 
 });
-
-// pathsRouter.post('/', async (request, response) => {
-  
-//   const { title,
-//       park_name, 
-//       starting_point, 
-//       path_length, 
-//       average_time, 
-//       average_drop,
-//       difficult,
-//       loop,
-//       path_numbers,
-//       description_it,
-//       description_en,
-//       gpx,
-//       pdf,
-//       userId } = request.body;
-
-//   const path = new Path({
-//     title: title,
-//     park_name: park_name,
-//     starting_point: starting_point,
-//     path_length: path_length,
-//     average_time: average_time,
-//     average_drop: average_drop,
-//     difficult: difficult,
-//     loop: loop,
-//     path_numbers: path_numbers,
-//     description_it: description_it,
-//     description_en: description_en,
-//     gpx: gpx,
-//     pdf: pdf,
-//     date: new Date()
-//   });
-   
-//   if( userId!==undefined ){ 
-//     const user = await User.findById(userId);
-//     console.log(user._id)
-//     path.users = path.users.concat(user._id);
-//     user.paths = user.paths.concat(path._id);
-//     await user.save();
-//   }
-
-//   const savedPath = await path.save();
-//   response.status(201).json(savedPath.toJSON());
-
-// });
 /* 
-pathsRouter.delete('/:id',async (request, response) => {
+pathsRouter.post('/', async (request, response) => {
+  
+  const { title,
+      park_name, 
+      starting_point, 
+      path_length, 
+      average_time, 
+      average_drop,
+      difficult,
+      loop,
+      path_numbers,
+      description_it,
+      description_en,
+      gpx,
+      pdf,
+      userId } = request.body;
+
+  const path = new Path({
+    title: title,
+    park_name: park_name,
+    starting_point: starting_point,
+    path_length: path_length,
+    average_time: average_time,
+    average_drop: average_drop,
+    difficult: difficult,
+    loop: loop,
+    path_numbers: path_numbers,
+    description_it: description_it,
+    description_en: description_en,
+    gpx: gpx,
+    pdf: pdf,
+    date: new Date()
+  });
+   
+  if( userId!==undefined ){ 
+    const user = await User.findById(userId);
+    console.log(user._id)
+    path.users = path.users.concat(user._id);
+    user.paths = user.paths.concat(path._id);
+    await user.save();
+  }
+
+  const savedPath = await path.save();
+  response.status(201).json(savedPath.toJSON());
+
+});
+  */
+/* pathsRouter.delete('/:id',async (request, response) => {
   await Path.findByIdAndRemove(request.params.id);
   response.status(204).end();
-}); */
-/* 
+});
+
 pathsRouter.put('/:id', (request, response, next) => {
   const body = request.body;
 
