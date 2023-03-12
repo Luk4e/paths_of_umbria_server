@@ -20,7 +20,7 @@ const getTokenFrom = request => {
 
 pathsRouter.get('/', async (request, response) => {
   const paths = await Path.find({});
-  /* const pathsGpx = await paths.map(p => {
+  const pathsGpx = await paths.map(p => {
     if(p.gpx!==''){
       return{
         id:p._id,
@@ -41,8 +41,8 @@ pathsRouter.get('/', async (request, response) => {
     }else{
       return p;
     }
-  }); */
-  response.json(paths);
+  });
+  response.json(pathsGpx);
 });
 
 pathsRouter.get('/allPaths', async (request, response) => {
