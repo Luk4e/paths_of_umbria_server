@@ -19,6 +19,7 @@ const pathSchema = new mongoose.Schema({
   description_en: String,
   gpx: String,
   pdf: String,
+  starting_lat_long: Array,
   date: Date,
 });
 
