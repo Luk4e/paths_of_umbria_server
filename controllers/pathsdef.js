@@ -19,8 +19,8 @@ const getTokenFrom = request => {
 };
 
 pathsRouter.get('/', async (request, response) => {
-  const paths = await Path.find({});
-  const pathsGpx = await paths.map(p => {
+  const paths = await Path.find({}, 'title park_name starting_point difficult path_length loop average_drop average_time starting_lat_long');
+ /*  const pathsGpx = await paths.map(p => {
     //if(p.gpx!==''){
     return{
       id:p._id,
@@ -42,8 +42,8 @@ pathsRouter.get('/', async (request, response) => {
     //}else{
     //  return p;
     //}
-  });
-  response.json(pathsGpx);
+  }); */
+  response.json(paths);
 });
 
 pathsRouter.get('/allPaths', async (request, response) => {

@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-const LatLong = new mongoose.Schema({type: Number})
-
 const pathSchema = new mongoose.Schema({
   title: {
     type: String,
