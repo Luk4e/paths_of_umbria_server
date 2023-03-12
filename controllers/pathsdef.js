@@ -18,7 +18,7 @@ const getTokenFrom = request => {
   return null;
 };
 
-pathsRouter.get('/', async (request, response) => {
+pathsRouter.get('/allPaths', async (request, response) => {
   const paths = await Path.find({});
   const pathsGpx = await paths.map(p => {
     if(p.gpx!==''){
@@ -45,7 +45,7 @@ pathsRouter.get('/', async (request, response) => {
   response.json(pathsGpx);
 });
 
-pathsRouter.get('/allPaths', async (request, response) => {
+pathsRouter.get('/', async (request, response) => {
   const paths = await Path.find({});
   response.json(paths);
 });
