@@ -57,7 +57,7 @@ const pathSchema = new mongoose.Schema({
     required: false,
   },
   starting_lat_long: {
-    type: [LatLong],
+    type: Array,
     required: true,
   },
   date: {
