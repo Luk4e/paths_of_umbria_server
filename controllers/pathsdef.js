@@ -35,7 +35,7 @@ pathsRouter.get('/', async (request, response) => {
         description_it:p.description_it,
         description_en:p.description_en,
         path_numbers:p.path_numbers,
-        gpx:gpxparsed(p.gpx).tracks[0].points.map(p => [p.lat, p.lon])[0],
+        gpx:"",//gpxparsed(p.gpx).tracks[0].points.map(p => [p.lat, p.lon])[0],
         date:p.date
       }
     }else{
