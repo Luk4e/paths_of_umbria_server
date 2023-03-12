@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const LatLong = new mongoose.Schema({type: Number})
+
 const pathSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -53,6 +55,10 @@ const pathSchema = new mongoose.Schema({
   pdf: {
     type: String,
     required: false,
+  },
+  starting_lat_long: {
+    type: [LatLong],
+    required: true,
   },
   date: {
     type: Date,
