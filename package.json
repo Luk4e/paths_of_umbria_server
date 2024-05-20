@@ -33,7 +33,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.4.7",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.22",
     "supertest": "^6.2.2"
   },
   "jest": {
